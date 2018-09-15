@@ -14,9 +14,14 @@ function graph()
 {
   var chosen = document.getElementById('try');
   if(chosen.value=="1")
+      document.write("graph 1 working!!!");
+  else
+      document.write("graph 2 working!!!");
+  /*var chosen = document.getElementById('try');
+  if(chosen.value=="1")
     graph1();
   else
-    graph2();
+    graph2();*/
 }
 function graph1() {  
 var ctx = document.getElementById("myChart");
