@@ -1,1 +1,0 @@
-Hi, this is my first test file to see the working of the commit, an essential of the GitHub platform.
