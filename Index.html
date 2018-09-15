@@ -4,11 +4,10 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width = device-width, initial-scale = 1">
-<title>yarra agribusiness Website</title>
+<title>Bootstrap Tutorial</title>
  
-<!-- Use downloaded version of Bootstrap. You can style everything here to your liking. -->
-<!-- Download the Bootstrap source code here
-http://getbootstrap.com/getting-started/ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+<script src="script.js"></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <style type="text/css">
@@ -16,17 +15,14 @@ body {
   font-size: 150.5%;
   font-family: arial, sans-serif;
 }
-
 header{
   color: grey;
   font-size: 28px;
 }
-
 #jumbotron
 {
   padding-top: 0px;
 }
-
 #websiteTitle{
   font-size: 10em;
   vertical-align: middle;
@@ -67,21 +63,19 @@ header{
 .carousel-caption p{
   font-size: 2em;
 }
+.img_size p{
+  height: 350px;
+  max-height: 350px;
+  min-height: 350px;
+  width: 350px;
+  min-width: 350px;
+  max-width: 350px;
+  padding-top: 10px;
+}
 </style>
 </head>
 <body>
-<!--
-<div class="container">
-  <div class="jumbotron">
-  <img src="ntt-logo.png" id="nttLogo" alt="New Think Tank Logo">
-  <span id="websiteTitle">New Think Tank</span>
-  <p id="websiteSlogan">Video Tutorials on just about Anything</p>
-  </div>
-</div>
--->
- 
-<!-- Carousel -->
-<!-- Surround everything with a div with the class carousel slide -->
+
 <div id="theCarousel" class="carousel slide" data-ride="carousel">
  
   <!-- Define how many slides to put in the carousel -->
@@ -111,8 +105,8 @@ header{
   <div class="item">
   <div class="slide3"></div>
   <div class="carousel-caption">
-  <h1>Amazing </h1>
-  <p></p>
+  <h1>Food for Thought</h1>
+  <p>Fills the soul</p>
   </div>
   </div>
   </div>
@@ -154,8 +148,7 @@ header{
         <span class="icon-bar"></span>
       </button>
  
-      <!-- You'll have to add padding in your image on the top and right of a few pixels (CSS Styling will break the navbar) -->
-     <!-- <a class="pull-left" href="#"><img src="NTTLogosm.png"></a> -->
+      
     </div>
  
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -163,6 +156,7 @@ header{
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
         <li><a href="#issues">Issues</a></li>
+        <li><a href="#Stats">Statistics</a></li>
         <li><a href="#solution">Solution</a></li>
         <li><a href="#about">About</a></li>
          <li><a href="#Contact">Contact Us</a></li>
@@ -190,6 +184,81 @@ header{
 
     <img src="issues.jpg" class="img-responsive">
   </div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+
+<div class="container text-center row jumbotron col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+
+  <a name="Stats"></a>
+  <header>Statistics</header>
+  <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
+  
+  
+
+  <!--Java Script-->
+  <div class="wrapper">
+      <h1></h1>
+      <h2>Data collected from various sources</h2>
+  <select>
+  <option value="1" id="a" onclick="javascript:graph1();">Rain and temp</option>
+  <option value="2" id="b" onclick="javascript:graph2();">Population and food</option>
+  </select>
+      <canvas id="myChart" width="600" height="400"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</div>
+
+
+<div>
+<!--
+  <table>
+    <tr>
+      <td>
+        <div class="thumbnail" height="400px" width="400px">
+        <img src="populationPIE.jpg" class="img-responsive img_size " height="350px" width="350px">
+        <div class="caption">
+          <p> The PieChart representation dispayes the tpopulation of all the states in Australia
+    </p>
+        </div>
+        </div>
+      </td>
+      <td>
+        <div class="thumbnail" height="400px" width="400px">
+        <img src="populationBAR.jpg" class="img-responsive img_size " height="350px" width="350px">
+        <div class="caption">
+          <p>Here we see the BarGraph representation of the data collected about the effect of population on food supply</p>
+        </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="thumbnail" height="400px" width="400px">
+        <img src="Climate.jpg" class="img-responsive img_size" height="350px" width="350px">
+        <div class="caption">
+          <p>Here we see the Bargraph and line graph representation of the data collected about the effect of Climate on food supply</p>
+        </div>
+        </div>
+      </td>
+      <td>
+        <div class="thumbnail" height="400px" width="400px">
+        <img src="Calamities.jpg" class="img-responsive img_size float-left" height="350px" width="350px">
+        <div class="caption">
+          <p>Here we see the Bargraph and line graph representation of the data collected about the effect of Calamities on food supply</p>
+        </div>
+        </div>
+      </td>
+    </tr>
+   </table>
+   -->
+  </div>
+ 
 </div>
 
 <br>

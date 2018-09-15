@@ -10,6 +10,8 @@ html(lang='en')
       Download the Bootstrap source code here
       http://getbootstrap.com/getting-started/
     
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js")
+    script(src="script.js")
     link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
     link(href='https://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet', type='text/css')
     style(type='text/css').
@@ -65,6 +67,15 @@ html(lang='en')
       .carousel-caption p{
       font-size: 2em;
       }
+      .img_size p{
+      height: 350px;
+      max-height: 350px;
+      min-height: 350px;
+      width: 350px;
+      min-width: 350px;
+      max-width: 350px;
+      padding-top: 10px;
+      }
   body
     //img.className#IdName(src="http://localhost:3000/images/ntt-logo.png" alt="New Think Tank Logo")
     //
@@ -101,8 +112,8 @@ html(lang='en')
         .item
           .slide3
           .carousel-caption
-            h1 Amazing 
-            p
+            h1 Food for Thought 
+            p Fills the soul
       // Set the actions to take when the arrows are clicked
       
       a.left.carousel-control(href='#theCarousel', data-slide='prev')
@@ -164,6 +175,20 @@ html(lang='en')
     br
     br
     .container.text-center.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
+      a(name='Stats')
+      header Statistics
+      .col-lg-12.col-lg-offset-0.col-md-12.col-md-offset-0.col-sm-10.col-sm-offset-1
+
+      //Javascript code
+      .wrapper
+        h1
+        h2 Data collected from various sources
+        select(id="try" onchange="graph()")
+            option#justtry(value='justtry') Please select your value
+            option#a(value='1') Rain and temp
+            option#b(value='2') Population and food
+        canvas(id="myChart" width="600" height="400") 
+    .container.text-center.row.jumbotron.col-lg-8.col-lg-offset-2.col-md-6.col-md-offset-3.col-sm-6.col-sm-offset-3
       a(name='solution')
       header.font-family-Pacifico Solutions
       .col-lg-10.col-lg-offset-1.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3
@@ -176,7 +201,7 @@ html(lang='en')
       .col-lg-10.col-lg-offset-1.col-md-8.col-md-offset-2.col-sm-6.col-sm-offset-3
         a(name='about')
         p
-          | We are from team A of yr-agribusiness-simulation project of unit SIT-764, currently studing at Deakin Burwood campus. our team members and faculty details are as follows:
+          | We are from team A of yr-agribusiness-simulation project of unit SIT-764, currently studing at Deakin Burwood Campus. Our team members and faculty details are as follows:
         ul
           li Alessio Bonti (Unit chair)
           li Wei Luo (Supervisor)

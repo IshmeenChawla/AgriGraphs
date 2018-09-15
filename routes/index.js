@@ -35,6 +35,11 @@ router.get('/abc', function(req, res){
   res.render('abc');
 });
 
+/*Get try.js*/
+router.get('try', function(req, res){
+  res.render('try');
+});
+
 
 /*Post to Add User Service*/
 router.post('/addnewuser', function(req, res) {
